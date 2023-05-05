@@ -1,5 +1,7 @@
+import Footer from '@/components/Footer';
 import './globals.css';
 import { Open_Sans } from 'next/font/google';
+import Header from '@/components/Header';
 
 const sans = Open_Sans({ subsets: ['latin'] });
 export const metadata = {
@@ -13,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={sans.className}>{children}</body>
+    <html lang='en' className={sans.className}>
+      <body className='flex flex-col w-full max-w-screen-2xl mx-auto'>
+        <Header />
+        <main className='grow bg-sky-400'>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
