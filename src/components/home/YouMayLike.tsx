@@ -1,8 +1,8 @@
 import { getNonFeaturedPosts } from '@/service/posts';
 import React from 'react';
 import 'react-multi-carousel/lib/styles.css';
-import PostCard from './PostCard';
-import MultiCarousel from './MultiCarousel';
+import PostCard from '../common/PostCard';
+import MultiCarousel from '../common/MultiCarousel';
 
 const YouMayLike = async () => {
   const posts = await getNonFeaturedPosts();

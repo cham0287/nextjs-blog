@@ -1,5 +1,5 @@
 import React from 'react';
-import PostsGrid from './PostsGrid';
+import PostsGrid from '../common/PostsGrid';
 import { getFeaturedPosts } from '@/service/posts';
 
 const FeaturedPosts = async () => {
