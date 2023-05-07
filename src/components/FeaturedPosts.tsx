@@ -4,7 +4,6 @@ import { getFeaturedPosts } from '@/service/posts';
 
 const FeaturedPosts = async () => {
   const posts = await getFeaturedPosts();
-  console.log(posts);
 
   return (
     <section className='w-2/3 mx-auto'>
