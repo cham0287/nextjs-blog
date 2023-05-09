@@ -1,7 +1,6 @@
 import FilterablePosts from '@/components/posts/FilterablePosts';
-import PostCard from '@/components/common/PostCard';
 import { getAllPosts } from '@/service/posts';
-import React, { MouseEventHandler } from 'react';
+import React from 'react';
 
 const PostsPage = async () => {
   const posts = await getAllPosts();
