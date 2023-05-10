@@ -1,3 +1,4 @@
+import MarkdownViewer from '@/components/posts/MarkdownViewer';
 import { getPostData } from '@/service/posts';
 import React from 'react';
 
@@ -13,7 +14,7 @@ const PostDetail = async ({ params: { slug } }: Props) => {
   return (
     <div>
       <h2 className='text-2xl font-bold'>{title}</h2>
-      <p>{content}</p>
+      <MarkdownViewer content={content} />
     </div>
   );
 };
