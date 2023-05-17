@@ -1,11 +1,14 @@
-'use client';
-
 import React, { useState } from 'react';
+import Hero from '@/components/common/Hero';
+import Description from '@/components/about/Description';
 
 const About = () => {
-  const [a, b] = useState<boolean>(true);
-  console.log(b);
-  return <div>about</div>;
+  return (
+    <div>
+      <Hero />
+      <Description />
+    </div>
+  );
 };
 
 export default About;
