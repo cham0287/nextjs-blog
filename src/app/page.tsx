@@ -1,5 +1,5 @@
 import FeaturedPosts from '@/components/home/FeaturedPosts';
-import Hero from '@/components/home/Hero';
+import Hero from '@/components/common/Hero';
 import YouMayLike from '@/components/home/YouMayLike';
 import React from 'react';
 
