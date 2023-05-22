@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Hero from '@/components/common/Hero';
 import Description from '@/components/about/Description';
 
