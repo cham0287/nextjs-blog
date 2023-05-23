@@ -2,27 +2,33 @@
 import React from 'react';
 import { useState } from 'react';
 import Banner, { BannerType } from './Banner';
+import { EmailForm } from '@/types/types';
+import { emailSender } from '@/service/emailSender';
 
-interface Form {
-  from: string;
-  subject: string;
-  message: string;
-}
+const EMAIL_FORM_DEFAULT_DATA = {
+  from: '',
+  subject: '',
+  message: '',
+};
 
-const SendEmail = () => {
-  const [form, setForm] = useState<Form>({
-    from: '',
-    subject: '',
-    message: '',
-  });
+const SendEmailForm = () => {
+  const [form, setForm] = useState<EmailForm>(EMAIL_FORM_DEFAULT_DATA);
   const [banner, setBanner] = useState<BannerType | null>(null);
   const onSubmitEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setForm({ from: '', subject: '', message: '' });
-    setBanner({ message: '메일 전송 성공!', state: 'success' });
-    setTimeout(() => {
-      setBanner(null);
-    }, 3000);
+    emailSender(form) //
+      .then(() => {
+        setBanner({ message: '메일 전송 성공!', state: 'success' });
+        setForm(EMAIL_FORM_DEFAULT_DATA);
+      })
+      .catch(() => {
+        setBanner({ message: '메일 전송 실패!', state: 'error' });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setBanner(null);
+        }, 3000);
+      });
   };
 
   const onChangeFormInput = (
@@ -85,4 +91,4 @@ const SendEmail = () => {
   );
 };
 
-export default SendEmail;
+export default SendEmailForm;

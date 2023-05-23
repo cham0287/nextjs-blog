@@ -12,3 +12,9 @@ export interface PostData extends Post {
   nextPost: Post | null;
   content: string;
 }
+
+export interface EmailForm {
+  from: string;
+  subject: string;
+  message: string;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
-import SendEmail from '@/components/contact/SendEmail';
+import SendEmailForm from '@/components/contact/SendEmailForm';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
         <BsLinkedin />
         <BsYoutube />
       </p>
-      <SendEmail />
+      <SendEmailForm />
     </div>
   );
 };
