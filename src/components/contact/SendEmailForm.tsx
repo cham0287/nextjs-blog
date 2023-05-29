@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import Banner, { BannerType } from './Banner';
 import { EmailForm } from '@/types/types';
-import { emailSender } from '@/service/emailSender';
+import { sendContactEmail } from '@/service/contact';
 
 const EMAIL_FORM_DEFAULT_DATA = {
   from: '',
@@ -16,7 +16,7 @@ const SendEmailForm = () => {
   const [banner, setBanner] = useState<BannerType | null>(null);
   const onSubmitEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailSender(form) //
+    sendContactEmail(form) //
       .then(() => {
         setBanner({ message: '메일 전송 성공!', state: 'success' });
         setForm(EMAIL_FORM_DEFAULT_DATA);

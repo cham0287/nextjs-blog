@@ -1,4 +1,3 @@
-import PostsPage from '@/app/posts/page';
 import { Post, PostData } from '@/types/types';
 import { readFile } from 'fs/promises';
 import path from 'path';

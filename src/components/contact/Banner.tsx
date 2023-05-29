@@ -10,7 +10,7 @@ const Banner = ({ message, state }: BannerType) => {
   const icon = isSuccess ? '✅' : '🔥';
   return (
     <p
-      className={`p-2 rounded-xl w-full text-center ${
+      className={`p-2 mb-4 rounded-xl w-full text-center ${
         isSuccess ? 'bg-green-300' : 'bg-red-300'
       }`}
     >
