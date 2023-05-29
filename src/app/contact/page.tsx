@@ -2,6 +2,11 @@ import React from 'react';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import SendEmailForm from '@/components/contact/SendEmailForm';
 
+export const metadata: Metadata = {
+  title: 'Contact Me',
+  description: 'Send Email to DK',
+};
+
 const Contact = () => {
   return (
     <div className='flex flex-col items-center'>
