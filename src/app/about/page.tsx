@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '@/components/common/Hero';
 import Description from '@/components/about/Description';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Me',

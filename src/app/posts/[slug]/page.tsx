@@ -3,12 +3,7 @@ import PostContent from '@/components/posts/PostContent';
 import { getPostData } from '@/service/posts';
 import Image from 'next/image';
 import React from 'react';
-
-interface PostDetailProps {
-  params: {
-    slug: string;
-  };
-}
+import { Metadata } from 'next';
 
 export async function generateMetadata({
   params: { slug },
@@ -19,8 +14,13 @@ export async function generateMetadata({
     description,
   };
 }
+interface PostDetailProps {
+  params: {
+    slug: string;
+  };
+}
 
-const PostDetail = async ({ params: { slug } }: Props) => {
+const PostDetail = async ({ params: { slug } }: PostDetailProps) => {
   const post = await getPostData(slug);
   const { title, path, prevPost, nextPost } = post;
   return (

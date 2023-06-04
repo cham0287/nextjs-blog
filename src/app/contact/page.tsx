@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsGithub, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import SendEmailForm from '@/components/contact/SendEmailForm';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact Me',

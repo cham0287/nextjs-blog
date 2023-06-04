@@ -1,6 +1,7 @@
 import FilterablePosts from '@/components/posts/FilterablePosts';
 import { getAllPosts } from '@/service/posts';
 import React from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'All Posts',
